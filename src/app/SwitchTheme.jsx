@@ -4,11 +4,11 @@ import { FiMoon, FiSun } from "react-icons/fi";
 
 const SwitchTheme = () => {
   //we store the theme in localStorage to preserve the state on next visit with an initial theme of dark.
-  const [theme, setTheme] = useState( "dark");
+  const [theme, setTheme] = useState( "forest");
 
   //toggles the theme
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(theme === "forest" ? "light" : "forest");
   };
 
   //modify data-theme attribute on document.body when theme changes

@@ -86,11 +86,11 @@ const toggleDarkMode = () => {
   // }, [theme]
   setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
 };
-const [theme, setTheme] = useState( "dark");
+const [theme, setTheme] = useState( "forest");
 
   //toggles the theme
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(theme === "forest" ? "light" : "forest");
     setIsDarkMode(!isDarkMode)
   };
 
