@@ -13,7 +13,7 @@ const Form =  () => {
   const [image, setImage] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [submited,setsubmited]=useState(true)
+  const [submited,setsubmited]=useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
