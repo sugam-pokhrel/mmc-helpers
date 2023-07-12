@@ -1,6 +1,7 @@
 import React from "react";
 import NotificationTab from "./NotificationTab";
 import NotificationList from "./NotificationList";
+import { FaFacebook } from 'react-icons/fa';
 
 const Navbar = () => {
   return (

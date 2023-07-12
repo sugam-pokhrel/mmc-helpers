@@ -5,6 +5,7 @@ import { FiMoon, FiSun } from "react-icons/fi";
 import { storage ,databases} from '../../appwrite';
 import { ID } from 'appwrite';
 import { Spinner } from 'react-spinners-css';
+import Link from 'next/link';
 
 const Form =  () => {
   const [name, setName] = useState('');
@@ -12,7 +13,7 @@ const Form =  () => {
   const [image, setImage] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [submited,setsubmited]=useState(false)
+  const [submited,setsubmited]=useState(true)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -105,9 +106,15 @@ const [theme, setTheme] = useState( "forest");
 
   if(submited){
     return (
-         <div className="text-center">
+
+    <div className={`flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 ${isDarkMode ? 'dark' : ''}`}>
+        <div className="text-center">
             <h2 className="text-2xl font-semibold mb-4">Thank you {name} for your response!</h2>
             <p className="text-lg text-gray-600">We appreciate your contribution.</p>
+            <p className="text-lg text-gray-600">
+            <Link href="/hello"> Click here to check development version</Link>.
+            </p>
+          </div>
           </div>
     )
   }
